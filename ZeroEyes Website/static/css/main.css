@@ -1,0 +1,132 @@
+.main {
+    background: white;
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 200px auto;
+    background: rgba(183, 187, 187, 0.592);
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+.login-container input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-container .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.login-container input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.check-for-login {
+    margin-top: 10px;
+}
+
+.check-for-login small {
+    font-size: 17px;
+}
+
+.check-for-login a {
+    text-decoration: none;
+    color:#01315e;
+    font-size: 17px;
+}
+
+
+.register-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 140px auto;
+    background: rgba(183, 187, 187, 0.592);
+}
+
+.register-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.register-container input[type="text"],
+.register-container input[type="email"],
+.register-container input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+.register-container input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.register-container input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.check-for-register {
+    text-decoration: none;
+    padding-top: 10px;
+}
+
+.check-for-register small{
+    font-size: 17px;
+}
+
+.check-for-register a{
+    text-decoration: none;
+    padding-top: 10px;
+    color:#01315e;
+    font-size: 17px;
+}
+
+.error {
+    margin-top: -11px;
+    color: #d50000e3;
+    margin-bottom: 10px;
+    font-family: Arial;
+}
