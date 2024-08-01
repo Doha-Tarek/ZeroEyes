@@ -1,6 +1,6 @@
 # ZeroEyes: Innovations in Weapon Detection and Integrated Security
 
-**A Graduation Project Submitted to the Faculty of Artificial Intelligence in Partial Fulfillment of the Requirements for the Degree of Bachelor of Science in Artificial Intelligence**
+**A Graduation Project Submitted to the Faculty of Artificial Intelligence in Partial Fulfillment of the Requirements for the Degree of Bachelor Artificial Intelligence**
 
 ## Project Overview
 ZeroEyes is an advanced surveillance system designed to enhance public safety by utilizing cutting-edge technologies for real-time threat detection and response. The system integrates various state-of-the-art models including YOLOv8 for gun and fire detection, MobileNet and Bi-directional LSTM for violence detection, and advanced face recognition techniques to identify suspicious individuals. This comprehensive solution is specifically tailored to meet the security needs of smart cities, important buildings such as government offices and corporate headquarters, as well as public places like parks, transportation hubs, and educational institutions. 
