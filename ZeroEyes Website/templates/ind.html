@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <style>
+    /* Styles for the container div */
+    .image-table-container {
+      /* Adjust the maximum width as needed */
+      margin: 0 auto; /* Center the container horizontally */
+    }
+    /* Styles for the table */
+    .image-table {
+      width: 100%;
+    }
+    .image-table th, .image-table td {
+      text-align: center;
+      padding: 10px;
+    }
+    .image-table img {
+      width: 600px; /* Adjust the width as needed */
+      height: 350px; /* Adjust the height as needed */
+      object-fit: cover; /* Maintain aspect ratio */
+    }
+  </style>
+</head>
+<body>
+  <div class="image-table-container">
+    <table class="image-table">
+      <tr>
+        <td>
+          <h2>Gun Detection</h2>
+          <img src="image.jpg" alt="Gun Detection">
+        </td>
+        <td>
+          <h2>Fire Detection</h2>
+          <img src="image.jpg" alt="Fire Detection">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h2>Violence Detection</h2>
+          <img src="image.jpg" alt="Violence Detection">
+        </td>
+        <td>
+          <h2>Face Recognition</h2>
+          <img src="image.jpg" alt="Face Recognition">
+        </td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{{url_for('static',filename='Lib/animate/animate.min.css')}}" rel="stylesheet">
+    <link href="{{url_for('static',filename='Lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+    <link href="{{url_for('static',filename='Lib/lightbox/css/lightbox.min.css')}}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{{url_for('static',filename='css/bootstrap.min.css')}}" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="{{url_for('static',filename='css/style.css')}}" rel="stylesheet">
+    
+    {% if title %}
+    <title>{{title}}</title>
+    {% else %}
+    <title>Homepage</title>
+    {% endif %}
+
+</head>
+<body>
+    
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 px-4 px-lg-5">
+        <a href="index.html" class="navbar-brand d-flex align-items-center">
+            <h2 class="m-0 text-primary">ZeroEyes</h2>
+        </a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-4 py-lg-0">
+                <a href="{{url_for('home')}}" class="nav-item nav-link active">Home</a>
+                <a href="{{url_for('login')}}" class="nav-item nav-link">Login</a>
+                <a href="{{url_for('register')}}" class="nav-item nav-link">Register</a>
+                <a href="#about" class="nav-item nav-link">About</a>
+                <a href="#services" class="nav-item nav-link">Services</a>
+                <a href="#contact" class="nav-item nav-link">Contact</a>
+                
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Header Start -->
+    <div class="container-fluid p-0 pb-5">
+        <div class="owl-carousel header-carousel position-relative">
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="{{url_for('static',filename='img/face.png')}}" alt="">
+                <div class="carousel-inner">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-lg-8 ">
+                                <h1 class="display-3 text-white animated slideInDown mb-4">Suspicious Individual Detection</h1>
+                                <p class="fs-5 text-white mb-4 pb-2">We provide advanced technology capable of identifying suspicious faces in real-time through our
+                                     sophisticated facial recognition system.</p>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="{{url_for('static',filename='img/fire.jpg')}}" alt="">
+                <div class="carousel-inner">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-lg-8 text-center">
+                                <h1 class="display-3 text-white animated slideInDown mb-4">Fire Detection</h1>
+                                <p class="fs-5 text-white mb-4 pb-2">We provide advanced technology to detect and prevent fire effectively</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="{{url_for('static',filename='img/gun.png')}}" alt="">
+                <div class="carousel-inner">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-lg-8 text-center">
+                                <h1 class="display-3 text-white animated slideInDown mb-4">Weapon Detection</h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-2">Our intelligent security system detects guns in real-time to ensure safety</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="{{url_for('static',filename='img/violence.png')}}" alt="">
+                <div class="carousel-inner">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-lg-8 text-center">
+                                <h1 class="display-3 text-white animated slideInDown mb-4">Violence Detection</h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-2">Monitor violent situations with our security system</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0" id="about">
+        <div class="container about px-lg-0">
+            <div class="row g-0 mx-lg-0">
+                <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute img-fluid w-100 h-100" src="{{url_for('static',filename='img/camera.jpg')}}" style="object-fit: contain;" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="p-lg-5 pe-lg-0">
+                        <div class="bg-primary mb-3" style="width: 60px; height: 2px;"></div>
+                        <h1 class="display-5 mb-4">About Us</h1>
+                        <p class="mb-4 pb-2"><b>Zero Eyes</b> is a smart project for making places safer. 
+                            It watches places in real-time using clever technology. 
+                            It can find things like people who might be up to no good, people carrying dangerous stuff, fights, and even fires. 
+                            Security workers can use a special website to watch what's happening, so they can react quickly. 
+                            This project is all about using the latest technology to keep public places and important buildings safe.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Service Start -->
+    <div class="container-xxl py-5" id="services">
+        <div class="container">
+            <div class="text-center">
+                <div class="bg-primary mb-3 mx-auto" style="width: 60px; height: 2px;"></div>
+                <h1 class="display-5 mb-5">Our Services</h1>
+            </div>
+            <div class="row g-0 service-row">
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="service-item border h-100 p-5">
+                        <div class="btn-square bg-light rounded-circle mb-4" style="width: 64px; height: 64px;">
+                            <img class="img-fluid" src="{{url_for('static',filename='img/icon/face-icon.png')}}" alt="Icon">
+                        </div>
+                        <h4 class="mb-3">Suspicious Individual Detection</h4>
+                        <p class="mb-4">Implementing facial recognition and behavior analysis,
+                             the system can identify individuals who match predefined threat profiles. 
+                             This includes recognizing known offenders or individuals displaying suspicious behavior.</p>
+                        
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+                    <div class="service-item border h-100 p-5">
+                        <div class="btn-square bg-light rounded-circle mb-4" style="width: 64px; height: 64px;">
+                            <img class="img-fluid" src="{{url_for('static',filename='img/icon/violence-icon.png')}}" alt="Icon">
+                        </div>
+                        <h4 class="mb-3">Violence Detection</h4>
+                        <p class="mb-4">By analyzing video frames for unusual movement patterns and aggressive behavior, 
+                            the system can detect incidents of violence. The algorithms are designed to recognize both physical altercations 
+                            and non-verbal cues indicative of violent behavior.</p>
+                        
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="service-item border h-100 p-5">
+                        <div class="btn-square bg-light rounded-circle mb-4" style="width: 64px; height: 64px;">
+                            <img class="img-fluid" src="{{url_for('static',filename='img/icon/fire-icon.png')}}" alt="Icon">
+                        </div>
+                        <h4 class="mb-3">Fire Detection And Safety</h4>
+                        <p class="mb-4">Utilizing image processing and pattern recognition techniques, 
+                            the system can identify the presence of smoke and flames, triggering alerts for potential fire hazards.</p>
+                        
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="service-item border h-100 p-5">
+                        <div class="btn-square bg-light rounded-circle mb-4" style="width: 64px; height: 64px;">
+                            <img class="img-fluid" src="{{url_for('static',filename='img/icon/gun-icon.png')}}" alt="Icon">
+                        </div>
+                        <h4 class="mb-3">Weapon Detection</h4>
+                        <p class="mb-4">The system uses object detection algorithms to recognize firearms and other weapons. 
+                            These algorithms are trained on diverse datasets to ensure high accuracy in various scenarios.</p>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+    
+    <!-- Contact Start -->
+    <div class="container-fluid bg-light overflow-hidden px-lg-0" id="contact">
+        <div class="container contact px-lg-0">
+            <div class="row g-0 mx-lg-0">
+                <div class="col-lg-6 contact-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="p-lg-5 ps-lg-0">
+                        <div class="section-title text-start">
+                            <div class="bg-primary mb-3" style="width: 60px; height: 2px;"></div>
+                            <h1 class="display-5 mb-4">Contact Us</h1>
+                        </div>
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                        <label for="name">Your Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                        <label for="email">Your Email</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                        <label for="subject">Subject</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
+                                        <label for="message">Message</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6 pe-lg-0" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100" src="{{url_for('static',filename='img/contact_us_banner1.jpg')}}" style="object-fit: contain;" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+    
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{url_for('static',filename='Lib/wow/wow.min.js')}}"></script>
+    <script src="{{url_for('static',filename='Lib/easing/easing.min.js')}}"></script>
+    <script src="{{url_for('static',filename='Lib/waypoints/waypoints.min.js')}}"></script>
+    <script src="{{url_for('static',filename='Lib/counterup/counterup.min.js')}}"></script>
+    <script src="{{url_for('static',filename='Lib/owlcarousel/owl.carousel.min.js')}}"></script>
+    <script src="{{url_for('static',filename='Lib/isotope/isotope.pkgd.min.js')}}"></script>
+    <script src="{{url_for('static',filename='Lib/isotope/isotope.pkgd.min.js')}}"></script>
+
+    <!-- Template Javascript -->
+    <script src="{{url_for('static',filename='js/main.js')}}"></script>
+    
+</body>
+</html>

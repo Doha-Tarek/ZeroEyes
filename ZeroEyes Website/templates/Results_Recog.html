@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZeroEyes</title>
+    <!-- Link to Google Fonts for Orbitron font -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: bold;
+            font-family: 'Orbitron', sans-serif;
+            color: rgb(207, 205, 205);
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: rgb(207, 205, 205);
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #fff;
+        }
+
+        .navbar li:last-child {
+            margin-right: 0;
+        }
+
+        .content {
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .content h1 {
+            color: rgb(207, 205, 205);
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .content h2 {
+            color: rgb(207, 205, 205);
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .content p {
+            color: rgb(207, 205, 205);
+            font-size: 18px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .video-container {
+            margin: 30px auto;
+            width: 80%;
+            max-width: 600px; /* Reduced the max width */
+            background-color: #000;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .video-container img {
+            width: 100%; /* Ensure image takes full width of the container */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        .download-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #444;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .download-button:hover {
+            background-color: #666;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: rgb(207, 205, 205);
+            margin-top: 20px;
+        }
+
+        .footer a {
+            color: rgb(207, 205, 205);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-brand">ZeroEyes</div>
+        <ul>
+            <li><a href="{{url_for('fire')}}" class="navbar">Fire</a></li>
+            <li><a href="{{url_for('gun')}}" class="navbar">Gun</a></li>
+            <li><a href="{{url_for('violence')}}" class="navbar">Violence</a></li>
+            <li><a href="{{url_for('recog')}}" class="navbar">Suspect Identification</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <h1>Processing Results</h1>
+        <p>The frame below was identified with the highest accuracy for suspect person. If no suspect person was detected, the most representative frame from the video is shown.</p>
+        <div class="video-container">
+            <img src="{{ url_for('static', filename='videos/' + key_frame) }}" alt="Key Frame" />
+        </div>
+
+        <h2>Download Processed Video</h2>
+        <p>Click the button below to download the processed video with the detected frames.</p>
+        <form method="GET" action="{{ url_for('download_Recog', filename='output.mp4') }}">
+            <button type="submit" class="download-button">Download Video</button>
+        </form>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 ZeroEyes. All rights reserved.</p>
+        <p><a href="contact.html">Contact Us</a> | <a href="privacy.html">Privacy Policy</a></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% if title %}
+    <title>{{title}}</title>
+    {% else %}
+    <title>Login</title>
+    {% endif %}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}"> 
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        
+        <form action="" method="post">
+            <input type="text" name="username" placeholder="Username" required minlength="4" maxlength="20">
+            <input type="password" name="password" placeholder="Password" required minlength="10" maxlength="120">
+            {% if error %}
+            <p class="error">{{ error }}</p>
+            {% endif %}
+            <input type="submit" value = "Login">
+        </form>
+        <div class="check-for-login">
+            <small>
+                Need an Account? 
+                <a href="{{url_for('register')}}">Sign Up Here</a>
+            </small>
+        </div>
+    </div>
+</body>
+</html>
+
