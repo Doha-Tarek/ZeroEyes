@@ -41,7 +41,7 @@ To set up ZeroEyes locally, follow these steps:
 ## System Design
 ZeroEyes consists of multiple components:
 1. **Detection Models**: YOLOv8 for gun and fire detection, MobileNet and LSTM for violence detection.
-2. **Web Interface**: Developed using Django and Flask to allow users to upload videos, view detection results, and use the live streaming feature.
+2. **Web Interface**: Developed using Flask to allow users to upload videos, view detection results, and use the live streaming feature.
 3. **Database**: SQLite for storing user information and detection results.
 
 ## Contributors
